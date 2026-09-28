@@ -12,10 +12,11 @@
             Отражение
         </a>
         <nav>
-            <a href="#">Услуги</a>
-            <a href="#">Портфолио</a>
-            <a href="#">Цены</a>
-            <a href="#">Контакты</a>
+            <a href="#services">Услуги</a>
+            <a href="#portfolio">Портфолио</a>
+            <a href="#prices">Цены</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#contacts">Контакты</a>
         </nav>
     </header>
 
@@ -27,17 +28,17 @@
                 Сделаем фотографию для паспорта, студенческого билета, 
                 водительского удостоверения и других документов.
             </p>
-            <a href="#" class="button">Связаться с нами</a>
+            <a href="#contact-us-form" class="button">Связаться с нами</a>
 
             <img
                 src="assets/images/photo-studio-interior.jpg"
-                alt="Интерьер фотостудии «Отражение"
+                alt="Интерьер фотостудии «Отражение»"
                 width="600"
                 height="400"
             >
         </section>
 
-        <section>
+        <section id="services">
             <h2>Услуги фотостудии</h2>
             <div>
                 <article>
@@ -97,7 +98,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="portfolio">
             <h2>Портфолио</h2>
             <p>Несколько примеров работ нашей фотостудии.</p>
 
@@ -154,7 +155,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="prices">
             <h2>Цены</h2>
             <table>
                 <thead>
@@ -191,7 +192,7 @@
             </p>
         </section>
 
-        <section>
+        <section id="reviews">
             <h2>Отзывы клиентов</h2>
                 <article>
                     <h3>Кравченко Ю.О</h3>
@@ -215,20 +216,21 @@
                 </article>
         </section>
 
-        <section>
+        <section id="contacts">
             <h2>Остались вопросы?</h2>
             <p>
                 Оставьте свои контакты, и мы свяжемся с вами, чтобы ответить на вопросы
                 о съёмке, стоимости или подготовке к фотосессии.
             </p>
 
-            <form action="#" method="post">
+            <form id="contact-us-form" action="#" method="post">
                 <div>
                     <label for="name">Ваше имя</label>
                     <input
                         type="text"
                         id="name"
                         name="name"
+                        autocomplete="name"
                         required
                     >
                 </div>
@@ -239,6 +241,7 @@
                         type="tel"
                         id="phone"
                         name="phone"
+                        autocomplete="tel"
                         required
                     >
                 </div>
@@ -249,6 +252,7 @@
                         type="email"
                         id="email"
                         name="email"
+                        autocomplete="email"
                     >
                 </div>
 
