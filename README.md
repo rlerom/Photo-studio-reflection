@@ -5,5 +5,7 @@
 HTML, CSS, JavaScript, PHP, MySQL.
 ## Запуск
 инструкция будет дополняться по мере разработки
+## Макет
+https://www.figma.com/design/ZPSgVDHoR8p8HY3RsDNVZr/Untitled?node-id=0-1&t=qQgGSK074iVZ3txw-1
 ## Автор: 
 Рыжакова Валерия Алексеевна
