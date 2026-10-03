@@ -4,32 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фотостудия «Отражение» — фото на документы</title>
+    <link rel=”stylesheet” href=”css/normalize.css”>
+    <link rel="stylecheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <a href="#">
+    <header class="site-header">
+        <a href="#" class="site-header__logo-text">
             Отражение
         </a>
-        <nav>
-            <a href="#services">Услуги</a>
-            <a href="#portfolio">Портфолио</a>
-            <a href="#prices">Цены</a>
-            <a href="#reviews">Отзывы</a>
-            <a href="#contacts">Контакты</a>
+        <nav class="site-nav">
+            <a class="site-nav__link" href="#services">Услуги</a>
+            <a class="site-nav__link" href="#portfolio">Портфолио</a>
+            <a class="site-nav__link" href="#prices">Цены</a>
+            <a class="site-nav__link" href="#reviews">Отзывы</a>
+            <a class="site-nav__link" href="#contacts">Контакты</a>
         </nav>
     </header>
 
     <main>
-        <section>
-            <p>Фотостудия в центре города</p>
-            <h1>Фото на документы быстро и качественно</h1>
-            <p>
-                Сделаем фотографию для паспорта, студенческого билета, 
-                водительского удостоверения и других документов.
-            </p>
-            <a href="#contact-us-form" class="button">Связаться с нами</a>
+        <section class="hero">
+            <div class="hero__content">
+                <p class="subtitle">Фотостудия в центре города</p>
+                <h1 class="hero__title">Фото на документы быстро и качественно</h1>
+                <p class="hero__text">
+                    Сделаем фотографию для паспорта, студенческого билета, 
+                    водительского удостоверения и других документов.
+                </p>
+                <a href="#contact-us-form" class="button">Связаться с нами</a>
+            </div>
 
             <img
+                class="hero__image"
                 src="assets/images/photo-studio-interior.jpg"
                 alt="Интерьер фотостудии «Отражение»"
                 width="600"
@@ -37,126 +42,143 @@
             >
         </section>
 
-        <section id="services">
-            <h2>Услуги фотостудии</h2>
-            <div>
-                <article>
+        <section id="services" class="services">
+            <h2 class="section-title">Услуги фотостудии</h2>
+            <div class="services__list">
+                <article class="service-card">
                     <img
+                        class="service-card__image"
                         src="assets/images/documents-photo.jpg"
                         alt="Пример фотографии на документы"
                         width="400"
                         height="630"
                     >
-                    <h3>Фото на документы</h3>
-                    <p>
-                        Фотографии на паспорт, водительское удостоверение,
-                        студенческий билет, пропуск и другие документы.
-                    </p>
+                    <div class="service-card__content">
+                        <h3 class="service-card__title">Фото на документы</h3>
+                        <p class="service-card__text">
+                            Фотографии на паспорт, водительское удостоверение,
+                            студенческий билет, пропуск и другие документы.
+                        </p>
+                    </div>
                 </article>
 
-                <article>
+                <article class="service-card">
                     <img
+                        class="service-card__image"
                         src="assets/images/portrait-photo.jpg"
                         alt="Портретная фотография девушки"
                         width="400"
                         height="600"
                     >
-                    <h3>Портретная съёмка</h3>
-                    <p>
-                        Индивидуальная фотосессия для социальных сетей, личного архива
-                        или профессионального портфолио.
-                    </p>
+                    <div class="service-card__content">
+                        <h3 class="service-card__title">Портретная съёмка</h3>
+                        <p class="service-card__text">
+                            Индивидуальная фотосессия для социальных сетей, личного архива
+                            или профессионального портфолио.
+                        </p>
+                    </div>
                 </article>
 
-                <article>
+                <articl class="service-card">
                     <img
+                        class="service-card__image"
                         src="assets/images/family-photo.jpg"
                         alt="Семейная фотография в студии"
                         width="400"
                         height="600"
                     >
-                    <h3>Семейная фотосессия</h3>
-                    <p>
-                        Тёплые фотографии для семьи: родители, дети, пары
-                        и несколько поколений вместе.
-                    </p>
+                    <div class="service-card__content">
+                        <h3 class="service-card__title">Семейная фотосессия</h3>
+                        <p class="service-card__text">
+                            Тёплые фотографии для семьи: родители, дети, пары
+                            и несколько поколений вместе.
+                        </p>
+                    </div>
                 </article>
 
-                <article>
+                <article class="service-card">
                     <img
+                        class="service-card__image"
                         src="assets/images/restoration-photo.jpg"
                         alt="Фотография до и после реставрации"
                         width="400"
                         height="250"
                     >
-                    <h3>Реставрация фотографий</h3>
-                    <p>
-                        Реставрация старых фотографий любой сложности.
-                    </p>
+                    <div class="service-card__content">
+                        <h3 class="service-card__title">Реставрация фотографий</h3>
+                        <p class="service-card__text">
+                            Реставрация старых фотографий любой сложности.
+                        </p>
+                    </div>
                 </article>
             </div>
         </section>
 
-        <section id="portfolio">
-            <h2>Портфолио</h2>
-            <p>Несколько примеров работ нашей фотостудии.</p>
+        <section id="portfolio" class="portfolio">
+            <h2 class="section-title section-title--light>Портфолио</h2>
+            <p class="section-text">Несколько примеров работ нашей фотостудии.</p>
 
             <div class="portfolio-list">
-                <figure>
+                <figure class="portfolio-card">
                     <img
+                        class="portfolio-card__image"
                         src="assets/images/portfolio-document.jpg"
                         alt="Фотография парня на документы"
                         width="360"
                         height="480"
                     >
-                    <figcaption>Фото на документы</figcaption>
+                    <figcaption class="portfolio-card__caption">Фото на документы</figcaption>
                 </figure>
 
-                <figure>
+                <figure class="portfolio-card">
                     <img
+                        class="portfolio-card__image"
                         src="assets/images/portfolio-portrait.jpg"
                         alt="Портрет девушки в фотостудии"
                         width="360"
                         height="250"
                     >
-                    <figcaption>Индивидуальный портрет</figcaption>
+                    <figcaption class="portfolio-card__caption">Индивидуальный портрет</figcaption>
                 </figure>
 
-                <figure>
+                <figure class="portfolio-card">
                     <img
+                        class="portfolio-card__image"
                         src="assets/images/portfolio-family.jpg"
                         alt="Семейная фотосессия родителей с ребёнком"
                         width="360"
                         height="250"
                     >
-                    <figcaption>Семейная фотосессия</figcaption>
+                    <figcaption class="portfolio-card__caption">Семейная фотосессия</figcaption>
                 </figure>
 
-                <figure>
+                <figure class="portfolio-card">
                     <img
+                        class="portfolio-card__image"
                         src="assets/images/portfolio-baby.jpg"
                         alt="Фотография ребёнка"
                         width="360"
                         height="250"
                     >
-                    <figcaption>Фотографии детей</figcaption>
+                    <figcaption class="portfolio-card__caption">Фотографии детей</figcaption>
                 </figure>
 
-                <figure>
+                <figure class="portfolio-card">
                     <img
+                        class="portfolio-card__image"
                         src="assets/images/portfolio-restoration.jpg"
                         alt="Реставрация фотографии - до и после"
                         width="360"
                         height="250"
                     >
-                    <figcaption>Реставрация фотографии</figcaption>
+                    <figcaption class="portfolio-card__caption">Реставрация фотографии</figcaption>
                 </figure>
             </div>
         </section>
 
-        <section id="prices">
-            <h2>Цены</h2>
-            <table>
+        <section id="prices" class="prices">
+            <h2 class="section-title">Цены</h2>
+            <table class="price-table">
                 <thead>
                     <tr>
                         <th scope="col">Услуга</th>
@@ -186,44 +208,44 @@
                 </tbody>
             </table>
 
-            <p>
+            <p class="section-note">
                 Точную стоимость дополнительных услуг можно уточнить у администратора.
             </p>
         </section>
 
-        <section id="reviews">
-            <h2>Отзывы клиентов</h2>
-                <article>
-                    <h3>Кравченко Ю.О</h3>
-                    <p>
+        <section id="reviews" class="reviews">
+            <h2 class="section-title">Отзывы клиентов</h2>
+                <article class="review-card">
+                    <h3 class="review-card__title">Кравченко Ю.О</h3>
+                    <p class="review-card__text">
                         «Все супер, быстро качественно что и нужно нам всем. Делал фото 3х4, дешево, быстро, удобно все соответствует описанию. Спасибо !».
                     </p>
                 </article>
 
-                <article>
-                    <h3>Айгуль Айгуль</h3>
-                    <p>
+                <article class="review-card">
+                    <h3 class="review-card__title">Айгуль Айгуль</h3>
+                    <p class="review-card__text">
                         Очень довольна осталась выполненной услугой! В трех местах отказали в помощи (составить коллаж фото), а девушки Фотостудии "Отражение" сразу взялись за работу. Отдельно Огромная БЛАГОДАРНОСТЬ за оперативность! Обращаюсь в данный салон не первый раз, каждый раз остаюсь благодарна и в хорошем настроении!!!
                     </p>
                 </article>
 
-                <article>
-                    <h3>Нюрка Кузнецова</h3>
-                    <p>
+                <article class="review-card">
+                    <h3 class="review-card__title">Нюрка Кузнецова</h3>
+                    <p class="review-card__text">
                         Шикарная фотостудия,сегодня 14.05.2026 делала фото на паспорт,получилось идеально👌 девушка очень вежливая и работает быстро. Просто недавно сделала в другом месте и это был просто ужас.Есть с чем сравнить. По цене в отражении получилось даже дешевле😁 Однозначно рекомендую👍
                     </p>
                 </article>
         </section>
 
-        <section id="contacts">
-            <h2>Остались вопросы?</h2>
-            <p>
+        <section id="contacts" class="contacts">
+            <h2 class="section-title">Остались вопросы?</h2>
+            <p class="subtitle">
                 Оставьте свои контакты, и мы свяжемся с вами, чтобы ответить на вопросы
                 о съёмке, стоимости или подготовке к фотосессии.
             </p>
 
-            <form id="contact-us-form" action="#" method="post">
-                <div>
+            <form id="contact-us-form" class="contact-us-form" action="#" method="post">
+                <div class="contact-us-form__input-field">
                     <label for="name">Ваше имя</label>
                     <input
                         type="text"
@@ -234,7 +256,7 @@
                     >
                 </div>
 
-                <div>
+                <div class="contact-us-form__input-field">
                     <label for="phone">Номер телефона</label>
                     <input
                         type="tel"
@@ -245,7 +267,7 @@
                     >
                 </div>
 
-                <div>
+                <div class="contact-us-form__input-field">
                     <label for="email">Электронная почта</label>
                     <input
                         type="email"
@@ -255,7 +277,7 @@
                     >
                 </div>
 
-                <div>
+                <div class="contact-us-form__input-field">
                     <label for="question">Ваш вопрос</label>
                     <textarea
                         id="question"
@@ -264,15 +286,15 @@
                     ></textarea>
                 </div>
 
-                <button>Отправить контакты</button>
+                <button class="button button--full" type="submit">Отправить контакты</button>
             </form>
         </section>
 
     </main>
-    <footer>
-            <h2>Контакты</h2>
+    <footer class="site-footer">
+            <h2 class="section-title section-title--light">Контакты</h2>
 
-            <address>
+            <address class="site-footer__address">
                 <p>
                     <strong>Адрес:</strong><br><br>
                     ​Дом Быта, Красноармейская улица, 43, ​2 этаж
