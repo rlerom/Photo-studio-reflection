@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--color-text-main, #434343);
+  background-color: var(--color-bg-main, #ffffff);
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+/* CSS Custom Properties (переменные) */
+:root {
+  /* Цвета */
+  --color-bg-dark: #595959;
+  --color-bg-light: #f5f5f5;
+  --color-bg-main: #ffffff;
+  --color-text-main: #434343;
+  --color-text-muted: #666666;
+  --color-text-light: #ffffff;
+  --color-accent: #434343; /* цвет кнопок */
+  
+  /* Отступы */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+  
+  /* Скругления */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}
