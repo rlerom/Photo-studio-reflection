@@ -10,12 +10,15 @@ section {
 }
 
 .site-header {
-    display: flex;
-    justify-content: space-between; /* распределяет элементы по главной оси горизонтально */
-    align-items: center; /* выравнивает по поперечной оси вертикально */
-    padding: var(--spacing-md, 16px) var(--spacing-lg, 32px);
-    background-color: var(--color-bg-dark, #595959);
+    background-color: var(--color-bg-dark, #333333);
     color: var(--color-text-light, #ffffff);
+    padding: var(--spacing-md, 16px) 0; /* Убрали горизонтальные отступы, они теперь в .container */
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .site-nav {
@@ -24,11 +27,14 @@ section {
 }
 
 .hero {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-lg, 32px);
-    padding: var(--spacing-xl, 64px) var(--spacing-lg, 32px);
+    padding: var(--spacing-xl, 64px) 0;
     background-color: var(--color-bg-light, #f5f5f5);
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg, 32px);
 }
 
 .hero__content {
@@ -38,6 +44,7 @@ section {
 .hero__image {
     flex: 1;
     max-width: 50%;
+    height: auto;
 }
 
 .site-footer {
@@ -51,4 +58,5 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-lg, 32px);
+    justify-content: center;
 }
