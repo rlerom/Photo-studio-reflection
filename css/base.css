@@ -32,7 +32,8 @@ button, input, textarea {
   --color-text-main: #434343;
   --color-text-muted: #666666;
   --color-text-light: #ffffff;
-  --color-accent: #434343; /* цвет кнопок */
+  --color-accent: #434343;
+  --color-interactive-focus: #00B2FF;
   
   /* Отступы */
   --spacing-sm: 8px;

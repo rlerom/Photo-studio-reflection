@@ -1,33 +1,33 @@
 .contact-us-form {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md, 16px);
-    max-width: 600px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md, 16px);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .contact-us-form__input-field {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm, 8px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm, 8px);
 }
 
 .contact-us-form label {
-    font-weight: bold;
-    font-size: 14px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .contact-us-form input,
 .contact-us-form textarea {
-    padding: var(--spacing-sm, 8px);
-    border: 1px solid #cccccc;
-    border-radius: var(--radius-sm, 4px);
-    width: 100%;
+  padding: var(--spacing-sm, 8px);
+  border: 1px solid #cccccc;
+  border-radius: var(--radius-sm, 4px);
+  width: 100%;
 }
 
 .contact-us-form input:focus-visible,
 .contact-us-form textarea:focus-visible {
-    outline: 2px solid #00B2FF;
-    outline-offset: 2px;
-    border-color: #00B2FF;
+  outline: 2px solid var(--color-interactive-focus, #00B2FF);
+  outline-offset: 2px;
+  border-color: var(--color-interactive-focus, #00B2FF);
 }
