@@ -1,0 +1,62 @@
+/* Общий контейнер */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md, 16px);
+}
+
+section {
+  padding: var(--spacing-xl, 64px) 0;
+}
+
+.site-header {
+  background-color: var(--color-bg-dark, #333333);
+  color: var(--color-text-light, #ffffff);
+  padding: var(--spacing-md, 16px) 0; /* Убрали горизонтальные отступы, они теперь в .container */
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  gap: var(--spacing-md, 16px);
+}
+
+.hero {
+  padding: var(--spacing-xl, 64px) 0;
+  background-color: var(--color-bg-light, #f5f5f5);
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg, 32px);
+}
+
+.hero__content {
+  flex: 1;
+}
+
+.hero__image {
+  flex: 1;
+  max-width: 50%;
+  height: auto;
+}
+
+.site-footer {
+  background-color: var(--color-bg-dark, #595959);
+  color: var(--color-text-light, #ffffff);
+  padding: var(--spacing-xl, 64px) var(--spacing-lg, 32px);
+}
+
+.site-footer__address {
+  font-style: normal;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg, 32px);
+  justify-content: center;
+}
