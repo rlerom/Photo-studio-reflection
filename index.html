@@ -22,161 +22,175 @@
     </header>
     <main>
         <section class="hero">
-            <div class="container">
-                <div class="hero__content">
-                <p class="subtitle">Фотостудия в центре города</p>
-                <h1 class="hero__title">Фото на документы быстро и качественно</h1>
-                <p class="hero__text">
-                    Сделаем фотографию для паспорта, студенческого билета,
-                    водительского удостоверения и других документов.
-                </p>
-                <a href="#contact-us-form" class="button">Связаться с нами</a>
-                </div>
+            <div class="hero__background">
+                <div class="container">
+                    <div class="hero__content">
+                        <p class="hero__subtitle">ФОТОСТУДИЯ</p>
+                        <h1 class="hero__title">ОТРАЖЕНИЕ</h1>
+                        <p class="hero__tagline">Фото на документы<br>быстро и качественно</p>
 
-                <img
-                class="hero__image"
-                src="assets/images/photo-studio-interior.jpg"
-                alt="Интерьер фотостудии «Отражение»"
-                width="600"
-                height="400"
-                >
+                        <div class="hero__bottom">
+                            <a href="#contact-us-form" class="button">Связаться с нами</a>
+                            <div class="hero__info">
+                                <p class="hero__info-item">
+                                    <span class="hero__icon">✓</span>
+                                    Ответим на каждый ваш вопрос
+                                </p>
+                                <p class="hero__info-item hero__info-item--location">
+                                    Фотостудия в центре города
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img
+                        class="hero__image"
+                        src="assets/images/hero-girl.png"
+                        alt="Фотограф с камерой"
+                        width="600"
+                        height="500"
+                    >
+                </div>
             </div>
         </section>
 
         <section id="services" class="services">
             <div class="container">
                 <h2 class="section-title">Услуги фотостудии</h2>
-                <div class="services__list">
-                <article class="service-card">
-                    <img
-                    class="service-card__image"
-                    src="assets/images/documents-photo.jpg"
-                    alt="Пример фотографии на документы"
-                    width="400"
-                    height="630"
-                    >
-                    <div class="service-card__content">
-                    <h3 class="service-card__title">Фото на документы</h3>
-                    <p class="service-card__text">
-                        Фотографии на паспорт, водительское удостоверение,
-                        студенческий билет, пропуск и другие документы.
-                    </p>
-                    </div>
-                </article>
+                <div class="services__grid">
+                    <article class="service-item service-item--left">
+                        <img
+                            class="service-item__image"
+                            src="assets/images/documents-photo.jpg"
+                            alt="Пример фотографии на документы"
+                            width="400"
+                            height="630"
+                        >
+                        <div class="service-item__content">
+                            <h3 class="service-item__title">Фото на документы</h3>
+                            <p class="service-item__text">
+                                Фотографии на паспорт, водительское удостоверение,
+                                студенческий билет, пропуск и другие документы.
+                            </p>
+                        </div>
+                    </article>
 
-                <article class="service-card">
-                    <img
-                    class="service-card__image"
-                    src="assets/images/portrait-photo.jpg"
-                    alt="Портретная фотография девушки"
-                    width="400"
-                    height="600"
-                    >
-                    <div class="service-card__content">
-                    <h3 class="service-card__title">Портретная съёмка</h3>
-                    <p class="service-card__text">
-                        Индивидуальная фотосессия для социальных сетей, личного архива
-                        или профессионального портфолио.
-                    </p>
-                    </div>
-                </article>
+                    <article class="service-item service-item--left">
+                        <img
+                            class="service-item__image"
+                            src="assets/images/portrait-photo.jpg"
+                            alt="Портретная фотография девушки"
+                            width="400"
+                            height="600"
+                        >
+                        <div class="service-item__content">
+                            <h3 class="service-item__title">Портретная съёмка</h3>
+                            <p class="service-item__text">
+                                Индивидуальная фотосессия для социальных сетей, личного архива
+                                или профессионального портфолио.
+                            </p>
+                        </div>
+                    </article>
 
-                <article class="service-card">
-                    <img
-                    class="service-card__image"
-                    src="assets/images/family-photo.jpg"
-                    alt="Семейная фотография в студии"
-                    width="400"
-                    height="600"
-                    >
-                    <div class="service-card__content">
-                    <h3 class="service-card__title">Семейная фотосессия</h3>
-                    <p class="service-card__text">
-                        Тёплые фотографии для семьи: родители, дети, пары
-                        и несколько поколений вместе.
-                    </p>
-                    </div>
-                </article>
+                    <!-- Второй ряд: текст слева, фото справа -->
+                    <article class="service-item service-item--right">
+                        <div class="service-item__content">
+                            <h3 class="service-item__title">Семейная фотосессия</h3>
+                            <p class="service-item__text">
+                                Тёплые фотографии для семьи: родители, дети, пары
+                                и несколько поколений вместе.
+                            </p>
+                        </div>
+                        <img
+                            class="service-item__image"
+                            src="assets/images/family-photo.jpg"
+                            alt="Семейная фотография в студии"
+                            width="400"
+                            height="600"
+                        >
+                    </article>
 
-                <article class="service-card">
-                    <img
-                    class="service-card__image"
-                    src="assets/images/restoration-photo.jpg"
-                    alt="Фотография до и после реставрации"
-                    width="400"
-                    height="250"
-                    >
-                    <div class="service-card__content">
-                    <h3 class="service-card__title">Реставрация фотографий</h3>
-                    <p class="service-card__text">
-                        Реставрация старых фотографий любой сложности.
-                    </p>
-                    </div>
-                </article>
+                    <article class="service-item service-item--right">
+                        <div class="service-item__content">
+                            <h3 class="service-item__title">Реставрация фотографий</h3>
+                            <p class="service-item__text">
+                                Реставрация старых фотографий любой сложности.
+                            </p>
+                        </div>
+                        <img
+                            class="service-item__image"
+                            src="assets/images/restoration-photo.jpg"
+                            alt="Фотография до и после реставрации"
+                            width="400"
+                            height="250"
+                        >
+                    </article>
                 </div>
             </div>
         </section>
 
         <section id="portfolio" class="portfolio">
-            <div class="container">
+            <div class="portfolio__header">
                 <h2 class="section-title section-title--light">Портфолио</h2>
                 <p class="section-text section-text--light">Несколько примеров работ нашей фотостудии.</p>
-
+            </div>
+            
+            <div class="portfolio__scroll-container">
                 <div class="portfolio-list">
-                <figure class="portfolio-card">
-                    <img
-                    class="portfolio-card__image"
-                    src="assets/images/portfolio-document-double.jpg"
-                    alt="Фотография парня на документы"
-                    width="360"
-                    height="250"
-                    >
-                    <figcaption class="portfolio-card__caption">Фото на документы</figcaption>
-                </figure>
+                    <figure class="portfolio-card">
+                        <img
+                            class="portfolio-card__image"
+                            src="assets/images/portfolio-document-double.jpg"
+                            alt="Фотография парня на документы"
+                            width="360"
+                            height="250"
+                        >
+                        <figcaption class="portfolio-card__caption">Фото на документы</figcaption>
+                    </figure>
 
-                <figure class="portfolio-card">
-                    <img
-                    class="portfolio-card__image"
-                    src="assets/images/portfolio-portrait.jpg"
-                    alt="Портрет девушки в фотостудии"
-                    width="360"
-                    height="250"
-                    >
-                    <figcaption class="portfolio-card__caption">Индивидуальный портрет</figcaption>
-                </figure>
+                    <figure class="portfolio-card">
+                        <img
+                            class="portfolio-card__image"
+                            src="assets/images/portfolio-portrait.jpg"
+                            alt="Портрет девушки в фотостудии"
+                            width="360"
+                            height="250"
+                        >
+                        <figcaption class="portfolio-card__caption">Индивидуальный портрет</figcaption>
+                    </figure>
 
-                <figure class="portfolio-card">
-                    <img
-                    class="portfolio-card__image"
-                    src="assets/images/portfolio-family.jpg"
-                    alt="Семейная фотосессия родителей с ребёнком"
-                    width="360"
-                    height="250"
-                    >
-                    <figcaption class="portfolio-card__caption">Семейная фотосессия</figcaption>
-                </figure>
+                    <figure class="portfolio-card">
+                        <img
+                            class="portfolio-card__image"
+                            src="assets/images/portfolio-family.jpg"
+                            alt="Семейная фотосессия родителей с ребёнком"
+                            width="360"
+                            height="250"
+                        >
+                        <figcaption class="portfolio-card__caption">Семейная фотосессия</figcaption>
+                    </figure>
 
-                <figure class="portfolio-card">
-                    <img
-                    class="portfolio-card__image"
-                    src="assets/images/portfolio-baby.jpg"
-                    alt="Фотография ребёнка"
-                    width="360"
-                    height="250"
-                    >
-                    <figcaption class="portfolio-card__caption">Фотографии детей</figcaption>
-                </figure>
+                    <figure class="portfolio-card">
+                        <img
+                            class="portfolio-card__image"
+                            src="assets/images/portfolio-baby.jpg"
+                            alt="Фотография ребёнка"
+                            width="360"
+                            height="250"
+                        >
+                        <figcaption class="portfolio-card__caption">Фотографии детей</figcaption>
+                    </figure>
 
-                <figure class="portfolio-card">
-                    <img
-                    class="portfolio-card__image"
-                    src="assets/images/portfolio-restoration.jpg"
-                    alt="Реставрация фотографии - до и после"
-                    width="360"
-                    height="250"
-                    >
-                    <figcaption class="portfolio-card__caption">Реставрация фотографии</figcaption>
-                </figure>
+                    <figure class="portfolio-card">
+                        <img
+                            class="portfolio-card__image"
+                            src="assets/images/portfolio-restoration.jpg"
+                            alt="Реставрация фотографии - до и после"
+                            width="360"
+                            height="250"
+                        >
+                        <figcaption class="portfolio-card__caption">Реставрация фотографии</figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
@@ -222,26 +236,26 @@
 
         <section id="reviews" class="reviews">
             <div class="container">
-                <h2 class="section-title">Отзывы клиентов</h2>
+                <h2 class="section-title section-title--light">Отзывы клиентов</h2>
                 <article class="review-card">
-                <h3 class="review-card__title">Кравченко Ю.О</h3>
-                <p class="review-card__text">
-                    «Все супер, быстро качественно что и нужно нам всем. Делал фото 3х4, дешево, быстро, удобно все соответствует описанию. Спасибо !».
-                </p>
+                    <h3 class="review-card__title">Кравченко Ю.О</h3>
+                    <p class="review-card__text">
+                        «Все супер, быстро качественно что и нужно нам всем. Делал фото 3х4, дешево, быстро, удобно все соответствует описанию. Спасибо !».
+                    </p>
                 </article>
 
                 <article class="review-card">
-                <h3 class="review-card__title">Айгуль Айгуль</h3>
-                <p class="review-card__text">
-                    Очень довольна осталась выполненной услугой! В трех местах отказали в помощи (составить коллаж фото), а девушки Фотостудии "Отражение" сразу взялись за работу. Отдельно Огромная БЛАГОДАРНОСТЬ за оперативность! Обращаюсь в данный салон не первый раз, каждый раз остаюсь благодарна и в хорошем настроении!!!
-                </p>
+                    <h3 class="review-card__title">Айгуль Айгуль</h3>
+                    <p class="review-card__text">
+                        Очень довольна осталась выполненной услугой! В трех местах отказали в помощи (составить коллаж фото), а девушки Фотостудии "Отражение" сразу взялись за работу. Отдельно Огромная БЛАГОДАРНОСТЬ за оперативность! Обращаюсь в данный салон не первый раз, каждый раз остаюсь благодарна и в хорошем настроении!!!
+                    </p>
                 </article>
 
                 <article class="review-card">
-                <h3 class="review-card__title">Нюрка Кузнецова</h3>
-                <p class="review-card__text">
-                    Шикарная фотостудия,сегодня 14.05.2026 делала фото на паспорт,получилось идеально👌 девушка очень вежливая и работает быстро. Просто недавно сделала в другом месте и это был просто ужас.Есть с чем сравнить. По цене в отражении получилось даже дешевле😁 Однозначно рекомендую👍
-                </p>
+                    <h3 class="review-card__title">Нюрка Кузнецова</h3>
+                    <p class="review-card__text">
+                        Шикарная фотостудия,сегодня 14.05.2026 делала фото на паспорт,получилось идеально👌 девушка очень вежливая и работает быстро. Просто недавно сделала в другом месте и это был просто ужас.Есть с чем сравнить. По цене в отражении получилось даже дешевле😁 Однозначно рекомендую👍
+                    </p>
                 </article>
             </div>
         </section>
@@ -305,30 +319,30 @@
         <div class="container">
             <h2 class="section-title section-title--light">Контакты</h2>
 
-            <address class="site-footer__address">
-                <p>
+            <div class="site-footer__address">
+                <div class="footer-column">
                     <strong>Адрес:</strong><br>
-                    ​Дом Быта, Красноармейская улица, 43, ​2 этаж
-                </p>
+                    Дом Быта, Красноармейская улица, 43, 2 этаж
+                </div>
 
-                <p>
+                <div class="footer-column">
                     <strong>Телефон:</strong><br>
                     +7 (902) 433-44-78
-                </p>
+                </div>
 
-                <p>
+                <div class="footer-column">
                     <strong>Электронная почта:</strong><br>
                     slavaandluda@mail.ru
-                </p>
+                </div>
 
-                <p>
+                <div class="footer-column">
                     <strong>Режим работы:</strong><br>
-                    Пн - Пт: с 9:00 до 18:30 <br>
-                    Суббота: с 10:00 до 18:00 <br>
-                    Воскресенье: с 10:00 до 17:30 <br>
-                </p>
-            </address>
+                    Пн - Пт: с 9:00 до 18:30<br>
+                    Суббота: с 10:00 до 18:00<br>
+                    Воскресенье: с 10:00 до 17:30
+                </div>
             </div>
-        </footer>
+        </div>
+    </footer>
     </body>
 </html>
