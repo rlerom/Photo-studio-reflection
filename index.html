@@ -23,23 +23,23 @@
     <main>
         <section class="hero">
             <div class="hero__background">
-                <div class="container">
+                <div class="container hero__container">
                     <div class="hero__content">
                         <p class="hero__subtitle">ФОТОСТУДИЯ</p>
                         <h1 class="hero__title">ОТРАЖЕНИЕ</h1>
+
+                        <div class="hero__divider"></div>
+
                         <p class="hero__tagline">Фото на документы<br>быстро и качественно</p>
 
+                        <p class="hero__description">
+                            Сделаем фотографию для паспорта, студенческого билета,
+                            водительского удостоверения и других документов.
+                        </p>
+                        
                         <div class="hero__bottom">
                             <a href="#contact-us-form" class="button">Связаться с нами</a>
-                            <div class="hero__info">
-                                <p class="hero__info-item">
-                                    <span class="hero__icon">✓</span>
-                                    Ответим на каждый ваш вопрос
-                                </p>
-                                <p class="hero__info-item hero__info-item--location">
-                                    Фотостудия в центре города
-                                </p>
-                            </div>
+                            <p class="hero__note"> отвечаем на каждый ваш вопрос</p>
                         </div>
                     </div>
 
@@ -58,73 +58,75 @@
             <div class="container">
                 <h2 class="section-title">Услуги фотостудии</h2>
                 <div class="services__grid">
-                    <article class="service-item service-item--left">
+                    <div class="service-cell service-cell--text">
+                        <h3 class="service-cell__title">Фото на документы</h3>
+                        <p class="service-cell__text">
+                            Фотографии на паспорт, водительское удостоверение,
+                            студенческий билет, пропуск и другие документы.
+                        </p>
+                    </div>
+                    <figure class="service-cell service-cell--image">
                         <img
-                            class="service-item__image"
+                            class="service-cell__image"
                             src="assets/images/documents-photo.jpg"
                             alt="Пример фотографии на документы"
                             width="400"
                             height="630"
                         >
-                        <div class="service-item__content">
-                            <h3 class="service-item__title">Фото на документы</h3>
-                            <p class="service-item__text">
-                                Фотографии на паспорт, водительское удостоверение,
-                                студенческий билет, пропуск и другие документы.
-                            </p>
-                        </div>
-                    </article>
+                    </figure>
 
-                    <article class="service-item service-item--left">
+                    <div class="service-cell service-cell--text">
+                        <h3 class="service-cell__title">Портретная съёмка</h3>
+                        <p class="service-cell__text">
+                            Индивидуальная фотосессия для социальных сетей, личного архива
+                            или профессионального портфолио.
+                        </p>
+                    </div>
+                    
+                    <figure class="service-cell service-cell--image">
                         <img
-                            class="service-item__image"
+                            class="service-cell__image"
                             src="assets/images/portrait-photo.jpg"
                             alt="Портретная фотография девушки"
                             width="400"
                             height="600"
                         >
-                        <div class="service-item__content">
-                            <h3 class="service-item__title">Портретная съёмка</h3>
-                            <p class="service-item__text">
-                                Индивидуальная фотосессия для социальных сетей, личного архива
-                                или профессионального портфолио.
-                            </p>
-                        </div>
-                    </article>
+                    </figure>
 
-                    <!-- Второй ряд: текст слева, фото справа -->
-                    <article class="service-item service-item--right">
-                        <div class="service-item__content">
-                            <h3 class="service-item__title">Семейная фотосессия</h3>
-                            <p class="service-item__text">
-                                Тёплые фотографии для семьи: родители, дети, пары
-                                и несколько поколений вместе.
-                            </p>
-                        </div>
+                    <figure class="service-cell service-cell--image">
                         <img
-                            class="service-item__image"
+                            class="service-cell__image"
                             src="assets/images/family-photo.jpg"
                             alt="Семейная фотография в студии"
                             width="400"
                             height="600"
                         >
-                    </article>
+                    </figure>
+                    
+                    <div class="service-cell service-cell--text">
+                        <h3 class="service-cell__title">Семейная фотосессия</h3>
+                        <p class="service-cell__text">
+                            Тёплые фотографии для семьи: родители, дети, пары
+                            и несколько поколений вместе.
+                        </p>
+                    </div>
 
-                    <article class="service-item service-item--right">
-                        <div class="service-item__content">
-                            <h3 class="service-item__title">Реставрация фотографий</h3>
-                            <p class="service-item__text">
-                                Реставрация старых фотографий любой сложности.
-                            </p>
-                        </div>
-                        <img
-                            class="service-item__image"
-                            src="assets/images/restoration-photo.jpg"
-                            alt="Фотография до и после реставрации"
-                            width="400"
-                            height="250"
-                        >
-                    </article>
+                <figure class="service-cell service-cell--image">
+                    <img
+                        class="service-cell__image"
+                        src="assets/images/restoration-photo-double.jpg"
+                        alt="Фотография до и после реставрации"
+                        width="400"
+                        height="600"
+                    >
+                </figure>
+
+                <div class="service-cell service-cell--text">
+                    <h3 class="service-cell__title">Реставрация фотографий</h3>
+                    <p class="service-cell__text">
+                        Реставрация старых фотографий любой сложности.
+                    </p>
+                </div>
                 </div>
             </div>
         </section>
