@@ -1,4 +1,3 @@
-/* Общий контейнер */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -12,7 +11,7 @@ section {
 .site-header {
   background-color: var(--color-bg-dark, #333333);
   color: var(--color-text-light, #ffffff);
-  padding: var(--spacing-md, 16px) 0; /* Убрали горизонтальные отступы, они теперь в .container */
+  padding: var(--spacing-md, 16px) 0;
 }
 
 .site-header .container {
@@ -53,16 +52,6 @@ section {
 }
 
 @media (max-width: 768px) {
-  
-  .hero__image {
-    position: relative;
-    width: 100%;
-    order: -1;
-  }
-
-  .hero__title {
-    font-size: 48px;
-  }
 
   .hero__bottom {
     flex-direction: column;
