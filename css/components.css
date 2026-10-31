@@ -176,6 +176,68 @@ h1, h2, h3 {
   align-self: end;
 }
 
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border: 1px solid var(--color-text-main, #434343);
+}
+
+.service-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  border: 1px solid var(--color-text-main, #434343);
+  background-color: var(--color-bg-main, #ffffff);
+}
+
+.service-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(16px, 3vw, 32px);
+  min-width: 0;
+}
+
+.service-card__title {
+  font-size: clamp(1.125rem, 1.5vw + 0.75rem, 1.5rem);
+  overflow-wrap: anywhere;
+}
+
+.service-card__text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-muted, #666666);
+  margin: 0;
+}
+
+
+/* Верхний ряд: текст слева, картинка справа.
+   Нижний ряд: по умолчанию img идёт первым - img слева. */
+.service-card:nth-child(-n+2) .service-card__image { order: 2; }
+.service-card:nth-child(-n+2) .service-card__content { order: 1; }
+
+@media (max-width: 960px) {
+  .services__list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .service-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .services__list .service-card .service-card__image,
+  .services__list .service-card .service-card__content { 
+    order: initial; 
+  } /* на мобильных - естественный порядок DOM */
+}
+
 @media (max-width: 768px) {
   .hero__container {
     grid-template-columns: minmax(0, 1fr);
@@ -209,75 +271,6 @@ h1, h2, h3 {
     gap: var(--spacing-md, 16px);
   }
 }
-
-.services__list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  border: 1px solid var(--color-text-main, #434343);
-}
-
-@media (max-width: 960px) {
-  .services__list {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-@media (max-width: 560px) {
-  .services__card {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .service-card__image,
-  .service-card__content { 
-    order: initial; 
-  } /* на мобильных - естественный порядок DOM */
-}
-
-.service-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  border: 1px solid var(--color-text-main, #434343);
-  background-color: var(--color-bg-main, #ffffff);
-}
-
-.service-card__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.service-card--image {
-  padding: 0;
-}
-
-.service-card__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: clamp(16px, 3vw, 32px);
-  min-width: 0;
-}
-
-.service-card__title {
-  font-size: clamp(1.125rem, 1.5vw + 0.75rem, 1.5rem);
-  overflow-wrap: anywhere;
-}
-
-.service-card__text {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--color-text-muted, #666666);
-  margin: 0;
-}
-
-.service-card--text {
-  background-color: var(--color-bg-light, #f5f5f5);
-}
-
-
-/* Верхний ряд: текст слева, картинка справа.
-   Нижний ряд: по умолчанию img идёт первым - img слева. */
-.service-card:nth-child(-n+2) .service-card__image { order: 2; }
-.service-card:nth-child(-n+2) .service-card__content { order: 1; }
 
 
 .portfolio {
