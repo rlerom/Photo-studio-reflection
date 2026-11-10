@@ -32,4 +32,36 @@ function initBackToTop() {
   updateButtonVisibility();
 }
 
+function initFloatingHeader() {
+  const header = document.querySelector('.site-header');
+  if (!header) {
+    return;
+  }
+
+  const HIDE_AFTER = 200;
+  let lastScrollY = window.scrollY;
+
+  function onWindowScroll() {
+    const currentScrollY = window.scrollY;
+    const isScrollingDown = currentScrollY > lastScrollY;
+
+    if (currentScrollY <= HIDE_AFTER) {
+      header.classList.remove('site-header--hidden');
+    } else if (isScrollingDown) {
+      header.classList.add('site-header--hidden');
+    } else {
+      header.classList.remove('site-header--hidden');
+    }
+
+    lastScrollY = currentScrollY;
+  }
+
+  header.addEventListener('focusin', () => {
+    header.classList.remove('site-header--hidden');
+  });
+
+  window.addEventListener('scroll', onWindowScroll, { passive: true });
+}
+
 initBackToTop();
+initFloatingHeader();
