@@ -63,5 +63,34 @@ function initFloatingHeader() {
   window.addEventListener('scroll', onWindowScroll, { passive: true });
 }
 
+function initPortfolioAutoplay() {
+  const list = document.querySelector('.portfolio-list');
+  const pauseButton = document.querySelector('#portfolio-pause');
+
+  if (!list || !pauseButton) {
+    return;
+  }
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReducedMotion) {
+    const originalCards = Array.from(list.children);
+    originalCards.forEach((card) => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      list.append(clone);
+    });
+  }
+
+  pauseButton.addEventListener('click', () => {
+
+    const willPause = pauseButton.getAttribute('aria-pressed') !== 'true';
+
+    pauseButton.setAttribute('aria-pressed', String(willPause));
+    list.classList.toggle('portfolio-list--paused', willPause);
+  });
+}
+
 initBackToTop();
 initFloatingHeader();
+initPortfolioAutoplay();

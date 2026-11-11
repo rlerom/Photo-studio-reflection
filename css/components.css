@@ -285,27 +285,72 @@ h1, h2, h3 {
   margin: 0 auto;
   padding: 0 var(--spacing-md, 16px);
   margin-bottom: var(--spacing-lg, 32px);
+  text-align: center;
 }
 
 .portfolio__scroll-container {
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: hidden;
   padding: 0 var(--spacing-md, 16px);
 }
 
 .portfolio-list {
   display: flex;
   flex-wrap: nowrap;
-  gap: var(--spacing-md, 16px);
   justify-content: flex-start;
   padding-bottom: var(--spacing-sm, 8px);
+  will-change: transform;
+  animation: portfolio-scroll 40s linear infinite;
+}
+
+@keyframes portfolio-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.portfolio__scroll-container:hover .portfolio-list,
+.portfolio__scroll-container:focus-within .portfolio-list {
+  animation-play-state: paused;
+}
+
+.portfolio-list--paused {
+  animation-play-state: paused;
+}
+
+.portfolio__pause {
+  display: inline-block;
+  margin-top: var(--spacing-md, 16px);
+  padding: var(--spacing-sm, 8px) var(--spacing-md, 16px);
+  background-color: transparent;
+  color: var(--color-text-light, #ffffff);
+  border: 1px solid var(--color-text-light, #ffffff);
+  border-radius: var(--radius-sm, 4px);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.portfolio__pause:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.portfolio__pause:focus-visible {
+  outline: 2px solid var(--color-interactive-focus, #00B2FF);
+  outline-offset: 2px;
+}
+
+.portfolio__pause[aria-pressed="true"] {
+  background-color: var(--color-text-light, #ffffff);
+  color: var(--color-text-main, #434343);
 }
 
 .portfolio-card {
   flex: 0 0 auto;
   width: 360px;
   max-width: none;
-  margin: 0;
+  margin: 0 var(--spacing-md, 16px) 0 0;
   background-color: transparent;
   border-radius: var(--radius-md, 8px);
   overflow: hidden;
@@ -337,7 +382,10 @@ h1, h2, h3 {
   flex-shrink: 0;
 }
 
-
+.portfolio__scroll-container:focus-visible {
+  outline: 2px solid var(--color-interactive-focus, #00B2FF);
+  outline-offset: -2px;
+}
 
 .price-table {
   width: 100%;
@@ -418,6 +466,13 @@ h1, h2, h3 {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .portfolio-list {
+    animation: none;
+  }
+  .portfolio__scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
   .portfolio-card {
     transition: none;
   }

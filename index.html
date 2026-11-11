@@ -133,9 +133,17 @@
             <div class="portfolio__header">
                 <h2 class="section-title section-title--light">Портфолио</h2>
                 <p class="section-text section-text--light">Несколько примеров работ нашей фотостудии.</p>
+                <button
+                    type="button"
+                    id="portfolio-pause"
+                    class="portfolio__pause"
+                    aria-pressed="false"
+                    >
+                    Пауза
+                </button>
             </div>
             
-            <div class="portfolio__scroll-container">
+            <div class="portfolio__scroll-container" aria-label="Лента работ портфолио">
                 <div class="portfolio-list">
                     <figure class="portfolio-card">
                         <img
