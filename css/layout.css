@@ -12,6 +12,14 @@ section {
   background-color: var(--color-bg-dark, #333333);
   color: var(--color-text-light, #ffffff);
   padding: var(--spacing-md, 16px) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.site-header--hidden {
+  transform: translateY(-100%);
 }
 
 .site-header .container {
@@ -51,6 +59,44 @@ section {
   padding: 0;
 }
 
+.back-to-top {
+  position: fixed;
+  right: var(--spacing-md, 16px);
+  bottom: var(--spacing-md, 16px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-accent, #434343);
+  color: var(--color-text-light, #ffffff);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: var(--color-interactive-focus, #00B2FF);
+}
+
+.back-to-top:focus-visible {
+  outline: 2px solid var(--color-interactive-focus, #00B2FF);
+  outline-offset: 2px;
+}
+
+/* Атрибут hidden из браузера по умолчанию - display:none, 
+но .back-to-top { display: flex } его перебивает.
+Поэтому дублируем правило явно. */
+.back-to-top[hidden] {
+  display: none;
+}
+
 @media (max-width: 768px) {
 
   .hero__bottom {
@@ -60,5 +106,14 @@ section {
 
   .site-footer__address {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top {
+    transition: none;
+  }
+  .site-header {
+    transition: none;
   }
 }
