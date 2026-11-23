@@ -20,9 +20,7 @@ function initBackToTop() {
 
     const logo = document.querySelector('.logo');
     if (logo) {
-      logo.focus({
-        preventScroll: true
-    });
+      logo.focus({ preventScroll: true });
     }
   }
 
@@ -72,6 +70,13 @@ function initPortfolioAutoplay() {
   }
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    const scrollContainer = document.querySelector('.portfolio__scroll-container');
+    if (scrollContainer) {
+      scrollContainer.setAttribute('tabindex', '0');
+    }
+  }
 
   if (!prefersReducedMotion) {
     const originalCards = Array.from(list.children);

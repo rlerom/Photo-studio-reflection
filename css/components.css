@@ -473,6 +473,9 @@ h1, h2, h3 {
     overflow-x: auto;
     overflow-y: hidden;
   }
+  .portfolio__pause {
+    display: none;
+  }
   .portfolio-card {
     transition: none;
   }
