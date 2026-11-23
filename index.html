@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фотостудия «Отражение» — фото на документы</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -132,9 +133,17 @@
             <div class="portfolio__header">
                 <h2 class="section-title section-title--light">Портфолио</h2>
                 <p class="section-text section-text--light">Несколько примеров работ нашей фотостудии.</p>
+                <button
+                    type="button"
+                    id="portfolio-pause"
+                    class="portfolio__pause"
+                    aria-pressed="false"
+                    >
+                    Пауза
+                </button>
             </div>
             
-            <div class="portfolio__scroll-container">
+            <div class="portfolio__scroll-container" aria-label="Лента работ портфолио">
                 <div class="portfolio-list">
                     <figure class="portfolio-card">
                         <img
@@ -343,5 +352,14 @@
             </address>
         </div>
     </footer>
+    <button
+        type="button"
+        id="back-to-top"
+        class="back-to-top"
+        aria-label="Вернуться в начало страницы"
+        hidden
+    >
+        <span aria-hidden="true">↑</span>
+    </button>
     </body>
 </html>
