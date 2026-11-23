@@ -244,28 +244,25 @@
 
         <section id="reviews" class="reviews">
             <div class="container">
-                <h2 class="section-title section-title--light">Отзывы клиентов</h2>
-                <article class="review-card">
-                    <h3 class="review-card__title">Кравченко Ю.О</h3>
-                    <p class="review-card__text">
-                        «Все супер, быстро качественно что и нужно нам всем. Делал фото 3х4, дешево, быстро, удобно все соответствует описанию. Спасибо !».
-                    </p>
-                </article>
+                <h2 class="section-title section-title--light" id="reviews-title">Отзывы клиентов</h2>
+                <div class="reviews__list" data-reviews-list aria-busy="false"></div>
+                <p class="reviews__status" data-reviews-status role="status"></p>
 
-                <article class="review-card">
-                    <h3 class="review-card__title">Айгуль Айгуль</h3>
-                    <p class="review-card__text">
-                        Очень довольна осталась выполненной услугой! В трех местах отказали в помощи (составить коллаж фото), а девушки Фотостудии "Отражение" сразу взялись за работу. Отдельно Огромная БЛАГОДАРНОСТЬ за оперативность! Обращаюсь в данный салон не первый раз, каждый раз остаюсь благодарна и в хорошем настроении!!!
-                    </p>
-                </article>
-
-                <article class="review-card">
-                    <h3 class="review-card__title">Нюрка Кузнецова</h3>
-                    <p class="review-card__text">
-                        Шикарная фотостудия,сегодня 14.05.2026 делала фото на паспорт,получилось идеально👌 девушка очень вежливая и работает быстро. Просто недавно сделала в другом месте и это был просто ужас.Есть с чем сравнить. По цене в отражении получилось даже дешевле😁 Однозначно рекомендую👍
-                    </p>
-                </article>
+                <button
+                    type="button"
+                    class="button reviews__retry"
+                    data-reviews-retry
+                    hidden
+                >
+                    Попробовать ещё раз
+                </button>
             </div>
+            <template id="review-card-template">
+                <article class="review-card">
+                    <h3 class="review-card__title"></h3>
+                    <p class="review-card__text"></p>
+                </article>
+            </template>
         </section>
 
         <section id="contacts" class="contacts">

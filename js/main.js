@@ -96,6 +96,74 @@ function initPortfolioAutoplay() {
   });
 }
 
+const REVIEWS_URL = 'data/reviews.json';
+
+const fetchReviews = async () => {
+  const response = await fetch(REVIEWS_URL);
+
+  if (!response.ok) {
+    throw new Error(`Сервер ответил ${response.status} ${response.statusText}`);
+  }
+
+  return response.json();
+};
+
+function initReviews() {
+  const list = document.querySelector('[data-reviews-list]');
+  const status = document.querySelector('[data-reviews-status]');
+  const retry = document.querySelector('[data-reviews-retry]');
+  const template = document.querySelector('#review-card-template');
+
+  if (!list || !status || !retry || !template) {
+    return;
+  }
+
+  const createReviewCard = (review) => {
+    const card = template.content.firstElementChild.cloneNode(true);
+
+    card.querySelector('.review-card__title').textContent = review.name;
+    card.querySelector('.review-card__text').textContent = review.description;
+
+    return card;
+  };
+
+  const loadReviews = async () => {
+    list.setAttribute('aria-busy', 'true');
+    status.textContent = 'Загружаем отзывы…';
+    retry.hidden = true;
+
+    try {
+      const reviews = await fetchReviews();
+
+      list.replaceChildren(...reviews.map(createReviewCard));
+
+      status.textContent = reviews.length === 0 ? 'Отзывов пока нет' : '';
+    } catch (error) {
+      console.error('Не удалось загрузить отзывы:', error);
+      status.textContent =
+        'Не удалось загрузить отзывы. Проверьте соединение и попробуйте ещё раз.';
+      retry.hidden = false;
+    } finally {
+      list.removeAttribute('aria-busy');
+    }
+  };
+
+  retry.addEventListener('click', async () => {
+    await loadReviews();
+
+    if (retry.hidden) {
+      const title = document.querySelector('#reviews-title');
+      if (title) {
+        title.setAttribute('tabindex', '-1');
+        title.focus();
+      }
+    }
+  });
+
+  loadReviews();
+}
+
 initBackToTop();
 initFloatingHeader();
 initPortfolioAutoplay();
+initReviews();

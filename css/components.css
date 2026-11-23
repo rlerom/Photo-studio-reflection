@@ -425,6 +425,29 @@ h1, h2, h3 {
   margin: 0;
 }
 
+.reviews__list[aria-busy="true"] {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.reviews__status {
+  color: var(--color-text-light, #ffffff);
+  text-align: center;
+  font-size: 14px;
+  margin: var(--spacing-sm, 8px) 0;
+  min-height: 1.2em; /* чтобы пустая строка не «схлопывала» пространство */
+}
+
+.reviews__status:empty {
+  min-height: 0;
+  margin: 0;
+}
+
+.reviews__retry {
+  display: block;
+  margin: 0 auto var(--spacing-md, 16px);
+}
+
 .reviews .container {
   max-width: 800px;
   min-width: 0;
